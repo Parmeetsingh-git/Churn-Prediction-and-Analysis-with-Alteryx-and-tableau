@@ -56,9 +56,32 @@ Both the datasets can be found in [Alteryx_folder](WORKFLOW_ALTERYX_DESIGN).
 ![IPvsChurnRate](TABLEAU_WORKBOOKS/IPvsChurn.png)
 
 ### Charges vs. Churn Rate
-- **Day Charges**: Higher day charges correlated with a higher likelihood of churn, suggesting that customers who incur higher costs during peak hours may be more price-sensitive.
-- **Night Charges**: Interestingly, higher night charges correlated with lower churn rates, possibly indicating that customers who utilize off-peak hours may find the service more valuable.
-- **International Charges**: Higher international charges showed a strong correlation with churn, reinforcing the idea that international customers are more likely to leave if they perceive the service as too costly.
+**High Churn Rate Segments:**
+
+The highest churn rates (83.33% - 100%) are observed in:
+- a) High Day Charge + High International Charge
+- b) High Evening Charge + High Night Charge
+- c) Medium Evening Charge + High Night Charge + High International Charge
+
+
+**Impact of Different Charge Types:**
+
+**Day Charges:** Strong influence on churn, with higher rates generally leading to higher churn
+**Evening Charges:** Significant impact, especially when combined with high Night or International charges
+**Night Charges:** Moderate impact, amplifies churn when combined with high charges in other categories
+**International Charges:** Notable impact, especially in combination with high charges in other categories
+
+
+**Low Churn Rate Segments:**
+
+Low Day and Evening charges combined with Low or Medium Night and International charges show the lowest churn rates
+Many segments with Low charges in multiple categories show 0% churn, indicating high retention
+
+
+**Charge Interactions:**
+
+High charges in any two categories seem to significantly increase churn risk
+The combination of High Evening + High Night charges consistently shows high churn rates
 
 ![ChargesvsChurnRate](TABLEAU_WORKBOOKS/ChargesVsChurn.png)
 
